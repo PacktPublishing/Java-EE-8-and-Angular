@@ -23,11 +23,11 @@ export class AppModule { }
 
 The book is being written considering Java EE 8 and Payara. But a compatible/stable version of Payara for the latest EE 8, hasn't been released yet. So the code has been verified against Payara Micro 5 Alpha releases (https://www.payara.fish/upstream_builds)
 
-Hardware: 64-bit machine with minimum 2 GB of RAM (4 GB preferred) and at least 5 GB of free disk space
-Software: JDK 8, Git, Maven, Payara Micro Server, Docker, Node, npm, Angular CLI
-Oracle JDK 8: All the codes are tested on Oracle JDK 8, but OpenJDK should work fine as well
-Docker: Docker CE and Docker Compose
-More details: Latest version of Git and Maven (Apache Maven 3.5 or above), Payara Micro 5 (https://www.payara.fish/downloads)
+* Hardware: 64-bit machine with minimum 2 GB of RAM (4 GB preferred) and at least 5 GB of free disk space
+* Software: JDK 8, Git, Maven, Payara Micro Server, Docker, Node, npm, Angular CLI
+* Oracle JDK 8: All the codes are tested on Oracle JDK 8, but OpenJDK should work fine as well
+* Docker: Docker CE and Docker Compose
+* More details: Latest version of Git and Maven (Apache Maven 3.5 or above), Payara Micro 5 (https://www.payara.fish/downloads)
 
 
 
