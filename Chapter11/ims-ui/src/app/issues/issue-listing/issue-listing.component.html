@@ -1,0 +1,34 @@
+<div class="boxed-container">
+    <div class="top-bar">
+        <button class="btn btn-primary" (click)="createIssue()">New Issue</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#Id</th>
+                <th>Label</th>
+                <th>Assigned To</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let issue of issues$ | async">
+                <td>{{issue.id}}</td>
+                <td>
+                    <a (click)="editIssue(issue)">
+                        <b>{{issue.label}}</b> - {{issue.description}}
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        <a *ngIf="issue.assignedTo" (click)="showUserInfo(issue.assignedTo)">
+                            {{issue.assignedTo?.name}}
+                        </a>
+                        <small>{{issue.assignedTo?.email}}</small>
+                    </p>
+                </td>
+                <td>{{issue.created | date}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

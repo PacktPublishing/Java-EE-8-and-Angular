@@ -1,0 +1,38 @@
+<form [formGroup]="issueForm" (ngSubmit)="onSave()">
+  <div class="form-group">
+    <input type="text" class="form-control" id="label" placeholder="Label" formControlName="label">
+    <span *ngIf="issueForm.get('label').touched && issueForm.get('label').hasError('required')">
+      Label is required
+    </span>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="description" placeholder="Description" formControlName="description">
+    <span *ngIf="issueForm.get('description').touched && issueForm.get('description').hasError('required')">
+      Description is required
+    </span>
+  </div>
+
+  <div class="form-group" *ngIf="users">
+    <select formControlName="assignedTo" id="assignedTo">
+      <option [ngValue]="null" disabled>Choose Assignee</option>
+      <option *ngFor="let assignedTo of users" [ngValue]="assignedTo">
+        {{assignedTo.credential.username}}
+      </option>
+    </select>
+    <span *ngIf="issueForm.get('assignedTo').touched && issueForm.get('assignedTo').hasError('required')">
+      Assignee is missing
+    </span>
+  </div>
+  
+  <div>
+    <a [routerLink]="['/issues']">Back</a>
+    <button type="submit" class="btn btn-primary" [disabled]="!issueForm.valid">Save</button>
+    <button type="button" class="btn btn-default" (click)="reset()">Reset</button>
+  </div>
+</form>
+
+<div style="margin-top: 10px;">
+  <pre>Form Valid? {{issueForm.valid | json}} <br/>{{issueForm.value | json}}
+    <br/>{{issueForm.status | json}}</pre>
+</div> 

@@ -1,0 +1,31 @@
+<header>
+  <div class="logo">
+    <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" />
+    <h4 class="title">Issue Management System</h4>
+  </div>
+  <div class="user">
+    <div class="welcome" *ngIf="authService.authenticated">Welcome, {{authService.currentUser.name}}</div>
+    <a (click)="authService.logout()" *ngIf="authService.authenticated">Logout</a>
+  </div>
+</header>
+<main>
+  <nav>
+    <ul>
+      <li>
+        <a routerLinkActive="active" routerLink="home">Dashboard</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="issues">Issues</a>
+      </li>
+    </ul>
+    <div>
+      <div class="chat-container">
+        <app-chat></app-chat>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <router-outlet></router-outlet>
+  </article>
+</main>

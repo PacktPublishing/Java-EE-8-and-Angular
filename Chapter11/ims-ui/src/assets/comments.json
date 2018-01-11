@@ -1,0 +1,20 @@
+[
+    {
+        "byUserName": "Bob",
+        "comment": {
+            "byUser": 2,
+            "forIssue": 1,
+            "id": 2,
+            "text": "I can fix this"
+        }
+    },
+    {
+        "byUserName": "Marcus",
+        "comment": {
+            "byUser": 1,
+            "forIssue": 1,
+            "id": 1,
+            "text": "Who can fix this?"
+        }
+    }
+]

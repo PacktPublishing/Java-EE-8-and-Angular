@@ -1,0 +1,20 @@
+[
+    {
+        "credential": {
+            "password": "1234",
+            "username": "marcus"
+        },
+        "email": "marcus_1982@jee8ng.org",
+        "id": 1,
+        "name": "Marcus"
+    },
+    {
+        "credential": {
+            "password": "1234",
+            "username": "bob"
+        },
+        "email": "bob@jee8ng.org",
+        "id": 2,
+        "name": "Bob"
+    }
+]

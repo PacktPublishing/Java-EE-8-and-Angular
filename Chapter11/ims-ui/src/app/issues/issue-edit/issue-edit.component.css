@@ -1,0 +1,30 @@
+.issue-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.issue-form {
+    flex: 3;
+}
+
+.comments-container {
+    flex: 1;
+    padding-left: 10px;
+}
+
+ul {
+    list-style: none;
+}
+ul > li {
+    margin-top: 24px;
+    border-bottom: 1px dashed #dec5c5;
+    font-size: 14px;
+}
+
+ul > li > p {
+    margin-left: 4px;
+}
+
+.comments-container > p {
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~https://fonts.googleapis.com/css?family=Roboto:300';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+}
+
+
+.chat-container {
+    flex: 1;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 10px 0 10px 5px;
+}

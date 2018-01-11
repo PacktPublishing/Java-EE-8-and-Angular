@@ -1,0 +1,58 @@
+header {
+    min-height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.welcome {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo > img {
+    height: 40px;
+}
+.logo > .title {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline;
+}
+
+main {
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+main > nav {
+    flex: 0 0 18em;
+    overflow-y: auto;
+    background-color: #323532;
+    padding: 25px;    
+}
+
+main > nav > ul > li {
+    padding: 5px;    
+    list-style: none;
+}
+
+main > nav > ul > li > a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #dfdfdf;
+    text-transform: uppercase;
+    text-shadow: 2em;
+    letter-spacing: 2px;
+}
+
+main > article {
+    flex: 1;
+    overflow-y: scroll;    
+    padding: 20px;
+    margin-top: 2px;
+    margin-left: 8px;
+    box-shadow: 0px -1px 5px #b4b4b5;
+}
