@@ -1,0 +1,4 @@
+org/jee8ng/ims/notify/boundary/NotificationsResource.class
+org/jee8ng/ims/notify/entity/Ticket.class
+org/jee8ng/ims/notify/boundary/WeatherResource.class
+org/jee8ng/ims/notify/JaxrsActivator.class

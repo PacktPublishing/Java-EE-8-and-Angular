@@ -1,0 +1,17 @@
+<h3>Dashboard</h3>
+<div class="column">
+  <ul>
+    <li *ngFor="let feed of feeds; let index = index" (click)="show(feed)" [class.even]="index % 2 !== 0" [class.odd]="index % 2 === 0">
+        <button (click)="remove(feed)">X</button> <span>{{ feed }}</span>
+    </li>
+  </ul>
+  <br/>
+  <p [class.red]="selected">Selected: {{selected}}</p>
+
+  <div class="row">
+    <app-item [header]="'Bookings'" [value]="stats.bookings"></app-item>
+    <app-item [header]="'Cancellations'" [value]="stats.cancellations"></app-item>
+    <app-item [header]="'Sales'" [value]="stats.sales"></app-item>
+  </div>
+
+</div>

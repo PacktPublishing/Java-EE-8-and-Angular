@@ -1,0 +1,26 @@
+<h3>Template Form (No Validations)</h3>
+<form class="form-inline boxed" (ngSubmit)="onSave(userForm)" #userForm="ngForm">
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="user.email">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" [(ngModel)]="user.phone">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<div>
+    User Model:
+    <pre>{{user | json}}</pre>
+</div>
+
+<div *ngIf="users.length > 0">
+    <ul class="list-group boxed">
+        <li class="list-group-item" *ngFor="let u of users">
+            Email: {{u.email}}, Phone: {{u.phone}}
+        </li>
+    </ul>
+</div>

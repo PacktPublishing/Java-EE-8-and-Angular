@@ -1,0 +1,3 @@
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-chat/src/main/java/org/jee8ng/chat/boundary/ChatEndpoint.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-chat/src/main/java/org/jee8ng/chat/boundary/CorsFilter.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-chat/src/main/java/org/jee8ng/chat/JAXRSActivator.java

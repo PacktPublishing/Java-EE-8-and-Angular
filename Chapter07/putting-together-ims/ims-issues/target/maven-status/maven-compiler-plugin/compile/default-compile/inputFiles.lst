@@ -1,0 +1,8 @@
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/entity/IssueEvent.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/entity/Issue.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/boundary/CorsFilter.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/boundary/IssuesResource.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/boundary/IssuesService.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/boundary/IssueUpdatesSSE.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/entity/User.java
+/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-issues/src/main/java/org/jee8ng/issues/JAXRSActivator.java

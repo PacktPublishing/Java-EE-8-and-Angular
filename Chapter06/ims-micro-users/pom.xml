@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.jee8ng</groupId>
+    <artifactId>ims-micro-users</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>ims-micro-users</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.16</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- <dependencies> <dependency> <groupId>javax.enterprise</groupId> <artifactId>cdi-api</artifactId> 
+    <version>2.0</version> <scope>provided</scope> </dependency> <dependency> 
+    <groupId>javax.ejb</groupId> <artifactId>javax.ejb-api</artifactId> <version>3.2</version> 
+    <scope>provided</scope> </dependency> <dependency> <groupId>javax.ws.rs</groupId> 
+    <artifactId>javax.ws.rs-api</artifactId> <version>2.1</version> <scope>provided</scope> 
+    </dependency> <dependency> <groupId>javax.validation</groupId> <artifactId>validation-api</artifactId> 
+    <version>2.0.0.Final</version> <scope>provided</scope> </dependency> <dependency> 
+    <groupId>javax.json</groupId> <artifactId>javax.json-api</artifactId> <version>1.1</version> 
+    <scope>provided</scope> </dependency> <dependency> <groupId>javax.json.bind</groupId> 
+    <artifactId>javax.json.bind-api</artifactId> <version>1.0</version> </dependency> 
+    <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> <version>4.12</version> 
+    <scope>test</scope> </dependency> </dependencies> -->
+
+    <build>
+        <finalName>ims-micro-users</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.github.kongchen</groupId>
+                <artifactId>swagger-maven-plugin</artifactId>
+                <version>3.1.5</version>
+                <configuration>
+                    <apiSources>
+                        <apiSource>
+                            <springmvc>false</springmvc>
+                            <locations>org.jee8ng.ims.users</locations>
+                            <schemes>http</schemes>
+                            <host>localhost:8080</host>
+                            <basePath>/resources</basePath>
+                            <info>
+                                <title>Demo</title>
+                                <version>1.0.0</version>
+                            </info>
+                            <outputFormats>json,yaml</outputFormats>
+                        </apiSource>
+                    </apiSources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
