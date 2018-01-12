@@ -29,6 +29,154 @@ The book is being written considering Java EE 8 and Payara. But a compatible/sta
 * Docker: Docker CE and Docker Compose
 * More details: Latest version of Git and Maven (Apache Maven 3.5 or above), Payara Micro 5 (https://www.payara.fish/downloads)
 
+### Specific instructions
+
+With the repository cloned or downloaded, navigate to the chapter for building and running the projects.
+
+#### Chapter 2 
+
+**cdise-starter**
+Within the project run: mvn clean install
+
+This downloads the dependencies and runs the single JUnit Test for CDI.
+
+#### Open the project and browse and run these classes 
+
+* BootCDI - To see simple CDI usage.
+* Task - To see @RequestScoped usage using RequestContextController and @ActivateRequestContext binding
+* Check org.jee8ng.starter.cdise.observer.Test for observer behaviour
+* Check org.jee8ng.starter.cdise.orderedobserver.AccountService for ordered observer
+* Check org.jee8ng.starter.cdise.annotationliteral.Test for seeing qualifier in action
+* Check org.jee8ng.starter.cdise.annotationliteral.TestDynamicQualifier for seeing dynamic qualifier
+
+**cdise-jpa-starter**
+Within the project run: mvn clean install
+
+Browse code starting with class App.java
+
+* App - contains CRUD operations using JPA
+* JPAProvider - used for obtaining EntityManager and cleanup
+
+
+#### jpa-validation-starter 
+Within the project run: mvn clean install
+
+Run project on Java EE 8 Server such as Payara 5 and observe output (Ignore the DROP TABLE exceptions)
+
+Browse code under package org.jee8ng.jpa.validation.starter which demos validations
+
+* Task.java makes use of @Entity, @MappedSuperclass and @EntityListeners
+* App.java executes JPA code on startup
+* WEB-INF/web.xml defines a datasource
+* src/main/resources/META-INF/persistence.xml defines the Persistence Unit
+
+#### Chapter 4 
+
+**payara folder has 3 projects**
+Within each project run: **mvn clean install**
+
+Then run each project as independent process using payara-micro-xxx.jar (xxx is version of latest server downloaded).
+
+**java -jar payara-micro-xxx.jar --deploy ims-micro-users/target/ims-microusers.war
+--port 8081**
+
+**java -jar payara-micro-xxx.jar --deploy ims-micro-tasks/target/ims-microtasks.war
+--port 8082**
+
+**java -jar payara-micro-xxx.jar --deploy ims-micro-notify/target/ims-micronotify.war
+--port 8083**
+
+
+#### Running with Docker ####
+ims-micro-users (Uses Payara Micro base image)
+
+* docker build -t jee8ng/ims-micro-users .
+* docker run -p 8080:8080 jee8ng/ims-micro-users
+
+ims-micro-tasks
+
+Create the runnable jar and then next create Docker container image using it.
+
+* java -jar payara-micro-xxx.jar --deploy ims-micro-tasks.war --outputUberJar ims-micro-tasks.jar
+* docker build -t jee8ng/ims-micro-tasks
+* docker run -p 8080:8080 jee8ng/ims-micro-tasks
+
+
+#### spring folder
+issue-manager-users - Maven example of Spring Boot Microservice project
+
+**mvn spring-boot:run**
+
+#### swarm folder
+issue-manager-users - Maven example of Wildfly Swarm Microservice project
+
+**mvn wildfly-swarm:run**
+
+
+#### Chapter 5
+
+* ims-micro-tasks
+* Deploy on a Payara 5 or Java EE 8 server and see server logs
+* Browse code under package org.jee8ng.ims.tasks
+
+
+#### Chapter 6
+
+Sample code to browse JAXRS features
+
+* ims-micro-notify
+* ims-micro-tasks
+* ims-micro-users
+
+jaxrsdemo
+
+* Sample code to check resource life cycle and filters.
+* Contains swagger annotations
+
+#### Chapter 7
+
+Build ims-security first by going to the project folder and running:
+**mvn clean install**
+
+Next run these commands to get the project up and running.
+
+* ims-users/buildAndRun.sh
+* ims-issues/buildAndRun.sh
+* ims-comments/buildAndRun.sh
+* ims-chat/buildAndRun.sh
+* Run **docker ps** and see if all Docker containers are up
+
+You can either play around with Postman or curl with the REST APIs or startup the Angular IMS app.
+
+
+#### Chapter 11
+
+Running the Angular IMS Application locally. This depeneds on Chapter 7 (backend).
+
+Run **npm install** from ims-ui project folder.
+Run **ng serve --open** from ims-ui project folder
+
+Two accounts would be setup already:
+
+>Account: Admin
+Username: admin
+Password: admin
+
+>Account: Guest
+Username: guest
+Password: guest
+
+
+#### Chapter 13 
+This depeneds on Chapter 7 (backend).
+
+Build project using **mvn clean install**
+
+
+#### Chapter 14 
+This library gets used in Chapter 7 code as well.
+
+Build project using **mvn clean install**
 
 
 ## Related Products
