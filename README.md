@@ -36,8 +36,8 @@ With the repository cloned or downloaded, navigate to the chapter for building a
 #### Chapter 2 
 
 **cdise-starter**
-Within the project run: mvn clean install
-
+Within the project run:
+`mvn clean install`
 This downloads the dependencies and runs the single JUnit Test for CDI.
 
 #### Open the project and browse and run these classes 
@@ -50,10 +50,10 @@ This downloads the dependencies and runs the single JUnit Test for CDI.
 * Check org.jee8ng.starter.cdise.annotationliteral.TestDynamicQualifier for seeing dynamic qualifier
 
 **cdise-jpa-starter**
+```
 Within the project run: mvn clean install
-
 Browse code starting with class App.java
-
+```
 * App - contains CRUD operations using JPA
 * JPAProvider - used for obtaining EntityManager and cleanup
 
