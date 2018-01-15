@@ -185,6 +185,3 @@ Build project using **mvn clean install**
 * [Architecting Modern Java EE Applications](https://www.packtpub.com/application-development/architecting-modern-java-ee-applications?utm_source=github&utm_medium=repository&utm_campaign=9781788393850)
 
 * [Java EE 8 Microservices](https://www.packtpub.com/application-development/java-ee-8-microservices?utm_source=github&utm_medium=repository&utm_campaign=9781788475143)
-
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
