@@ -1,0 +1,66 @@
+.title {
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.chat-outbox {
+    float: left;
+    border: 1px solid #eeeeee;
+    color: #828282;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.chat-inbox {
+    float: right;
+    border: 1px solid transparent;
+    background: #b5d6df;
+    border-radius: 15px;
+    color: #0d5777;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.time {float: right;}
+
+.name {
+    font-size: 12px;
+    color: #0d5777;
+    font-weight: 600;
+}
+.btn-submit {
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+
+.chat-desc-container {
+    overflow-x: auto;
+    padding-right: 7px;
+    height: 265px;
+    width: 183px;
+}
+
+
+/* Scrollbar only for webkit browsers */
+.scrollbar::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar-thumb
+{
+    background-color: #b6d3db;
+}
+
+input {
+    width: 146px;
+}

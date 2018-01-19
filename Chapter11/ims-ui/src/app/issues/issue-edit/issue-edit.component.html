@@ -1,0 +1,64 @@
+<div class="issue-container" *ngIf="issue">
+  <div class="issue-form">
+    <form [formGroup]="issueForm" (ngSubmit)="onSave()">
+      <div class="form-group">
+        <input type="text" class="form-control" id="label" placeholder="Label" formControlName="label">
+        <span *ngIf="issueForm.get('label').touched && issueForm.get('label').hasError('required')">
+          Label is required
+        </span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="description" placeholder="Description" formControlName="description">
+        <span *ngIf="issueForm.get('description').touched && issueForm.get('description').hasError('required')">
+          Description is required
+        </span>
+      </div>
+
+      <div class="form-group" *ngIf="users">
+        <select [compareWith]="compareUser" formControlName="assignedTo" id="assignedTo">
+          <option *ngFor="let assignedTo of users" [ngValue]="assignedTo">
+            {{assignedTo.credential.username}}
+          </option>
+        </select>
+        <span *ngIf="issueForm.get('assignedTo').touched && issueForm.get('assignedTo').hasError('required')">
+          Assignee is missing
+        </span>
+      </div>
+
+      <div class="action-group">
+        <div class="back-link">
+          <a [routerLink]="['/issues']">Back</a>
+        </div>
+        <div class="action">
+          <button type="submit" class="btn btn-primary" [disabled]="!issueForm.valid">Save</button>
+          <button class="btn btn-danger" (click)="deleteIssue()">X</button>
+        </div>
+      </div>
+
+    </form>
+    <div style="margin-top: 10px;">
+      <pre>Form Valid? {{issueForm.valid | json}} <br/>{{issueForm.value | json}}
+          <br/>{{issueForm.status | json}}</pre>
+    </div>
+  </div>
+
+  <div class="comments-container">
+    <p>COMMENTS</p>
+    <form #commentForm="ngForm" (ngSubmit)="onComment(commentForm)">
+      <div class="comment-input">
+        <input type="text" class="form-control" id="comment" required [(ngModel)]="comment" name="comment" minlength="5" maxlength="30">
+      </div>
+      <button type="submit" class="btn btn-default" [disabled]="!commentForm.form.valid">Submit</button>
+    </form>
+
+    <ul>
+      <li *ngFor="let comment of issue?.comments">
+        <b>
+          <u>{{comment.byUserName}}</u>
+        </b>
+        <p>{{comment.comment.text}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
