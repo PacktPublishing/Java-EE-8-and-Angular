@@ -1,0 +1,26 @@
+header {
+    min-height: 50px;
+}
+
+footer {
+    min-height: 50px;
+}
+
+main {
+    flex: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+main > nav {
+    flex: 0 0 12em;
+    overflow-y: auto;
+}
+
+main > article {
+    flex: 1;
+    overflow-y: scroll;
+    background-color: #f5f4f4;
+}

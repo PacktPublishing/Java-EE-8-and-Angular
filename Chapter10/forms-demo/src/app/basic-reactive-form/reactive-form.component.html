@@ -1,0 +1,17 @@
+<h3>Reactive Form (No Validations)</h3>
+<form [formGroup]="userForm" (ngSubmit)="onSave()" class="form-inline">
+  <div class="form-group">
+    <input type="text" class="form-control" id="email" placeholder="Email" formControlName="email">
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="phone" placeholder="Phone" formControlName="phone">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-danger" (click)="reset()">Reset</button>
+</form>
+
+<div style="margin-top: 10px;">
+  <pre>{{userForm.value | json}}</pre>
+</div>

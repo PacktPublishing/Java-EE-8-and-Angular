@@ -1,0 +1,44 @@
+h3 {
+    padding:10px;
+}
+ul {
+    border: 1px solid black;
+    box-shadow: 0 8px 6px -6px black;
+    border-radius: 7pt;
+    list-style: none;
+    height: 220px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 18px;
+    background-color: white;
+}
+
+ul>li {
+    cursor: pointer;
+    padding: 8px;
+}
+ul>li:hover { 
+    background-color:rgb(174, 231, 248); 
+}
+.even {
+    background-color: #edeff1
+}
+
+
+.odd {
+    background-color: #f7faff
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-left: 10px;
+    justify-content: space-around;
+    height: 400px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+
+}
