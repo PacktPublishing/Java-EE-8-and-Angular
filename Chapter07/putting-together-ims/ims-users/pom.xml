@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.jee8ng</groupId>
+    <artifactId>ims-users</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+                        
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>1.1.15.Final</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            
+        </dependencies>
+    </dependencyManagement>
+    
+    <dependencies>
+        <!-- This project requires JWT security lib -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ims-security</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.16</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.195</version>
+        </dependency>
+        
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>fish.payara.extras</groupId>
+            <artifactId>payara-embedded-all</artifactId>
+            <version>5.0.0.Alpha3</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-container</artifactId>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>fish.payara.arquillian</groupId>
+            <artifactId>arquillian-payara-server-4-embedded</artifactId>
+            <version>1.0.Beta2</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!--REST API testing and validation made easy -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.6</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- Makes it easy to parse JSON documents -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>3.0.6</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        
+        
+    </dependencies>
+    
+    <build>
+        <finalName>ims-users</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.github.kongchen</groupId>
+                <artifactId>swagger-maven-plugin</artifactId>
+                <version>3.1.5</version>
+                <configuration>
+                    <apiSources>
+                        <apiSource>
+                            <springmvc>false</springmvc>
+                            <locations>org.jee8ng.users.boundary</locations>
+                            <schemes>http</schemes>
+                            <host>localhost:8081</host>
+                            <basePath>/${project.build.finalName}/resources</basePath>
+                            <info>
+                                <title>Users API</title>
+                                <version>v1</version>
+                                <description>Users rest endpoints</description>
+                                <license>
+                                    <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+                                    <name>Apache 2.0</name>
+                                </license>
+                            </info>
+                            <outputFormats>yaml</outputFormats>
+                            <swaggerDirectory>${basedir}/src/main/webapp</swaggerDirectory>                            
+                        </apiSource>
+                    </apiSources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <systemProperties>
+                        <arquillian.launch>glassfish-embedded</arquillian.launch>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+</project>
