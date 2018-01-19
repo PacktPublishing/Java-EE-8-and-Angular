@@ -1,6 +1,0 @@
-org/jee8ng/users/boundary/UsersService.class
-org/jee8ng/users/boundary/CorsFilter.class
-org/jee8ng/users/entity/Credential.class
-org/jee8ng/users/entity/User.class
-org/jee8ng/users/JAXRSActivator.class
-org/jee8ng/users/boundary/UsersResource.class

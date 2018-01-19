@@ -1,6 +1,0 @@
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-users/src/main/java/org/jee8ng/users/boundary/UsersResource.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-users/src/main/java/org/jee8ng/users/JAXRSActivator.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-users/src/main/java/org/jee8ng/users/boundary/CorsFilter.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-users/src/main/java/org/jee8ng/users/entity/User.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-users/src/main/java/org/jee8ng/users/entity/Credential.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-users/src/main/java/org/jee8ng/users/boundary/UsersService.java

@@ -1,4 +1,0 @@
-[
-    { "op": "replace", "path": "/name", 
-      "value": "The new name goes here" }
-]

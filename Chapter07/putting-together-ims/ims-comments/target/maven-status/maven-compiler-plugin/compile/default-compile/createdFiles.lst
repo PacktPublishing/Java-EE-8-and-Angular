@@ -1,7 +1,0 @@
-org/jee8ng/comments/boundary/CommentsResource.class
-org/jee8ng/comments/control/FindUserName.class
-org/jee8ng/comments/boundary/CommentsService.class
-org/jee8ng/comments/entity/Comment.class
-org/jee8ng/comments/entity/CommentInfo.class
-org/jee8ng/comments/JAXRSActivator.class
-org/jee8ng/comments/boundary/CorsFilter.class

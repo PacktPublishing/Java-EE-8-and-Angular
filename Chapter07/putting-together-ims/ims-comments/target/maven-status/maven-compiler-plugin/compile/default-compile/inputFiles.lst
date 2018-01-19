@@ -1,7 +1,0 @@
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/boundary/CorsFilter.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/entity/Comment.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/boundary/CommentsResource.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/JAXRSActivator.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/entity/CommentInfo.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/control/FindUserName.java
-/Users/prashantp/Documents/packt_book/jee8ng-book/ch7_putting_together_payara/putting-together-ims/ims-comments/src/main/java/org/jee8ng/comments/boundary/CommentsService.java

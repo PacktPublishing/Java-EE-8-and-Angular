@@ -1,8 +1,0 @@
-org/jee8ng/issues/JAXRSActivator.class
-org/jee8ng/issues/entity/User.class
-org/jee8ng/issues/boundary/IssuesResource.class
-org/jee8ng/issues/boundary/CorsFilter.class
-org/jee8ng/issues/boundary/IssueUpdatesSSE.class
-org/jee8ng/issues/entity/Issue.class
-org/jee8ng/issues/boundary/IssuesService.class
-org/jee8ng/issues/entity/IssueEvent.class
